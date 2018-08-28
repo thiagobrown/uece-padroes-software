@@ -5,6 +5,8 @@
  */
 package br.uece.ees.q04.decorator;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author thiago
@@ -23,6 +25,6 @@ public abstract class Yogurt {
     }
 
     public final void getPedido() {
-        System.out.println("Yogurt :: " + getNome() + " => Preço :: " + getPreco());
+        System.out.println("Yogurt :: " + getNome() + " => Preço :: R$ " + new DecimalFormat("#0.00").format(getPreco()));
     }
 }
